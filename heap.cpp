@@ -6,6 +6,7 @@ int capacity = 1000;
 int *heap = new int[capacity];
 
 int heap_size = 0;
+int size;
 
 void swap(int *a, int *b){
 	int temp = *a;
@@ -74,6 +75,22 @@ void print_heap(){
 	cout <<  endl;
 }
 
+void print_heap(int size){
+	for (int i = 0; i < size;i++){
+		cout << heap[i] << " ";
+	}
+	cout <<  endl;
+}
+
+void heapSort() {
+	size = heap_size;
+	for (int i = 0; i < size; i++) {
+		swap(&heap[0], &heap[heap_size - 1 ]);
+		heap_size--;
+		minHeaping(0);
+	}
+}
+
 int main() {
 
 	insert_key(10);
@@ -86,9 +103,8 @@ int main() {
 	insert_key(13);
 	print_heap();
 
-	exctractMin();
-	
-	print_heap();
+	heapSort();
+	print_heap(size);
 
 	system("pause");
 	return 0;
