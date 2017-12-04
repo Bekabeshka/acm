@@ -4,7 +4,14 @@ using namespace std;
 int n;
 int x, y;
 int arr[1001];
-int res[1001][1001];
+int res[1001];
+
+int factorial(int n) {
+	if (n == 1) {
+		return 1;
+	}
+	return n * factorial(n - 1);
+}
 
 void mySwap(int a,int b) {
 	int t = arr[a];
@@ -14,14 +21,13 @@ void mySwap(int a,int b) {
 
 void generate(int k) {
 	if (k == n) {
-		for(int i = 0; i < n; i++) {
-			res[x][y] = arr[i] << " ";
+		for (int i = 0; i < n; i++) {
+			res[y] = arr[i];
 			y++;
 		}
-		x++;
 	}
 	else { 
-		for(int j = k; j < n; j++) {
+		for (int j = k; j < n; j++) {
 			mySwap(k, j);
 			generate(k + 1);
 			mySwap(k, j);
@@ -33,14 +39,18 @@ int main() {
 
 	cin >> n;
 
-	for(int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) {
 		arr[i] = i + 1;
 	}
 
 	generate(0);
 
-	for (int i = 0; i < n; i++) {
-		
+	int size = factorial(n);
+	for (int i = 0; i < size * n; i++) {
+		cout << res[i] << " ";
+
+		if (i % n == (n - 1))
+			cout << '\n';
 	}
 
 	return 0;
