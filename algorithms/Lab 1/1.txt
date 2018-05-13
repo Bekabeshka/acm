@@ -1,0 +1,4 @@
+1. Tree with n vertexes will have n – 1 edges, because if there were more edges, our tree would have cycles. In addition, if there will be less than n – 1 
+edge some of the vertexes would not be connected.
+For instance: if we had 1 vertex in a tree we would have 0 edges, then adding one more vertex we have to connect it with existing one, 
+therefore we should add 1 more edge and so on.

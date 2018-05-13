@@ -1,0 +1,2 @@
+To connect n vertexes our tree should contain n – 1 edges, if there less edges, some vertexes would not be connected. 
+Therefore that, not connected vertex can be called separate graph.

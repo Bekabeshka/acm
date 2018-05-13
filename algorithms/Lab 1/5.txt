@@ -1,0 +1,3 @@
+5. Bridge is an edge removing which we disconnect the graphs. 
+As tree do not have cycles, removing one edge will disconnect the tree, therefore we will obtain one more tree. 
+So we can assume than every edge in a tree can be called bridge. Due to this fact, there will be n – 1 bridges in the tree.

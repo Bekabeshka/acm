@@ -1,0 +1,2 @@
+6. We can explore all neighbors of that vertex. By explore I mean find all neighbors and explore them. Then when we finally get to 
+the destination, we have to go back to start and show the path. To make this we can use depth-first search.

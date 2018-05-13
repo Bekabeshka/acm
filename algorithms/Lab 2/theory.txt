@@ -1,0 +1,19 @@
+1. If the there are n vertexes and k connected components (k <= n), there will be n - k edges.
+Because, there are n - 1 adge in graph (no cycles) and when we make one more component, we should delete one edge from the existing graph, 
+and as there is 1 connected component at the beginning we obtain 
+
+(n - 1) - (k - 1) = n - k - 1 + 1 = n - k.
+	
+	n - 1 -- max amoung of edges (no cycles)
+	k - 1 -- k - amount of components and we substract 1, due to the fact that we already have 1 component
+
+2. There will be 16 simple paths. 
+	1 is direct (1 - 2)
+	3 through 1 vertexe
+	4 through 2 vertexes
+	4 through 3 vertexes
+
+3. If all vertexes has 2 edges, that means that there will be cycles, as there will have cycles, moreover, there won't be any vridges.
+Amount of bridges = 0. 
+
+2*n > 2 * (n - 1) > n - 1
